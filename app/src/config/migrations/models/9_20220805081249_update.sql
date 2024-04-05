@@ -1,0 +1,6 @@
+-- upgrade --
+ALTER TABLE "user" ALTER COLUMN "email" TYPE VARCHAR(256) USING "email"::VARCHAR(256);
+ALTER TABLE "user" ALTER COLUMN "password" TYPE VARCHAR(256) USING "password"::VARCHAR(256);
+-- downgrade --
+ALTER TABLE "user" ALTER COLUMN "email" TYPE VARCHAR(360) USING "email"::VARCHAR(360);
+ALTER TABLE "user" ALTER COLUMN "password" TYPE VARCHAR(360) USING "password"::VARCHAR(360);
