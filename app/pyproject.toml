@@ -1,0 +1,22 @@
+[tool.black]
+line-length = 92
+include = '\.pyi?$'
+exclude = '''
+  /(
+      \.git
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+    | node_modules
+  )/
+'''
+
+[tool.aerich]
+tortoise_orm = "src.config.db.DB_CONFIG"
+location = "src/config/migrations"
+src_folder = "./."
